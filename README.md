@@ -1,4 +1,4 @@
-## Latest updates -- SAM 2: Segment Anything in Images and Videos
+## OV-DQUO-SAM
 
 Please check out our new release on [**Segment Anything Model 2 (SAM 2)**](https://github.com/facebookresearch/segment-anything-2).
 
