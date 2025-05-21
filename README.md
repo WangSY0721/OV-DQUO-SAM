@@ -56,13 +56,6 @@ Additionally, masks can be generated for images from the command line:
 python scripts/amg.py --checkpoint <path/to/checkpoint> --model-type <model_type> --input <image_or_folder> --output <path/to/output>
 ```
 
-See the examples notebooks on [using SAM with prompts](/notebooks/predictor_example.ipynb) and [automatically generating masks](/notebooks/automatic_mask_generator_example.ipynb) for more details.
-
-<p float="left">
-  <img src="assets/notebook1.png?raw=true" width="49.1%" />
-  <img src="assets/notebook2.png?raw=true" width="48.9%" />
-</p>
-
 ## Dataset
 
 See [here](https://ai.facebook.com/datasets/segment-anything/) for an overview of the datastet. The dataset can be downloaded [here](https://ai.facebook.com/datasets/segment-anything-downloads/). By downloading the datasets you agree that you have read and accepted the terms of the SA-1B Dataset Research License.
@@ -91,19 +84,5 @@ annotation {
     "stability_score"       : float,            # A measure of the mask's quality
     "crop_box"              : [x, y, w, h],     # The crop of the image used to generate the mask, in XYWH format
     "point_coords"          : [[x, y]],         # The point coordinates input to the model to generate the mask
-}
-```
-
-Image ids can be found in sa_images_ids.txt which can be downloaded using the above [link](https://ai.facebook.com/datasets/segment-anything-downloads/) as well.
-
-To decode a mask in COCO RLE format into binary:
-
-```
-from pycocotools import mask as mask_utils
-mask = mask_utils.decode(annotation["segmentation"])
-```
-
-See [here](https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/mask.py) for more instructions to manipulate masks stored in RLE format.
-  year={2023}
 }
 ```
